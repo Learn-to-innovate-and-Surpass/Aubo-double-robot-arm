@@ -1,0 +1,150 @@
+# Settings for ros_control control loop
+hardware_control_loop:
+   loop_hz: 100
+
+# Settings for ros_control hardware interface
+hardware_interface:
+   peak_can_device:
+     num: 3
+     device0: can0
+     device1: can1
+     device2: can2
+   joints:
+   - L_Joint1
+   - L_Joint2
+   - L_Joint3
+   - L_Joint4
+   - L_Joint5
+   - L_Joint6
+   - L_Joint7
+   - R_Joint1
+   - R_Joint2
+   - R_Joint3
+   - R_Joint4
+   - R_Joint5
+   - R_Joint6
+   - R_Joint7
+   - H_Joint1
+   - H_Joint2
+   jointID:
+   - 1
+   - 2
+   - 3
+   - 4
+   - 5
+   - 6
+   - 7
+   - 11
+   - 12
+   - 13
+   - 14
+   - 15
+   - 16
+   - 17
+   - 21
+   - 22
+   jointDevice:
+   - device0
+   - device0
+   - device0
+   - device0
+   - device0
+   - device0
+   - device0
+   - device1
+   - device1
+   - device1
+   - device1
+   - device1
+   - device1
+   - device1
+   - device2
+   - device2
+   grippers:
+   - Gripper1
+   - Gripper2
+   gripperID:
+   - 8
+   - 18
+   gripperDevice:
+   - device0
+   - device1
+
+mrp2a:
+
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  arm_trajectory_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - Joint1
+      - Joint2
+      - Joint3
+      - Joint4
+      - Joint5
+      - Joint6
+      - Joint7
+
+    constraints:
+      goal_time: 2.0                   # Defaults to zero
+      stopped_velocity_tolerance: 0.1 # Defaults to 0.01
+      Joint1:
+        trajectory: 0
+        goal: 0.2
+      Joint2:
+        trajectory: 0
+        goal: 0.2
+      Joint3:
+        trajectory: 0
+        goal: 0.2
+      Joint4:
+        trajectory: 0
+        goal: 0.2
+      Joint5:
+        trajectory: 0
+        goal: 0.2
+      Joint6:
+        trajectory: 0
+        goal: 0.2
+      Joint7:
+        trajectory: 0
+        goal: 0.2
+
+    state_publish_rate:  50 # Defaults to 50
+    action_monitor_rate: 20 # Defaults to 20
+    #hold_trajectory_duration: 0 # Defaults to 0.5
+
+
+
+  # Position Controllers ---------------------------------------
+  joint1_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint2_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint3_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint4_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint5_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint5
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint6_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint6
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint7_position_controller:
+    type: position_controllers/JointPositionController
+    joint: Joint7
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+

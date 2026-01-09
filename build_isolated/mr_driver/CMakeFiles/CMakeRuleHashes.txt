@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+07302ad021077aa29a238073d068cf13 CMakeFiles/clean_test_results
+fc6cfd25da91983f04d2622a8ad7aa3a src/control_panel/CMakeFiles/control_panel_automoc
+61c5b31f4d4327f0fb87d0a4b4d6a2d6 src/control_panel/ui_mainwindow.h

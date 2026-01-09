@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: mr_bringup
+Description: Description of mr_bringup
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

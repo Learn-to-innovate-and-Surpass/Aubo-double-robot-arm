@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel_isolated/mr_gazebo
+
+Name: mr_gazebo
+Description: Description of mr_gazebo
+Version: 1.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

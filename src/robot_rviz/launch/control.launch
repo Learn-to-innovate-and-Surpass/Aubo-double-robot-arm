@@ -1,0 +1,14 @@
+<launch>
+    <param name="robot_description" textfile="$(find robot_rviz)/urdf/robot.urdf"/>
+    <node pkg="rviz"  type="rviz" name="rviz" />
+    
+
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" />
+    <!-- <node pkg="arbotix_python" type="arbotix_driver" name="driver" output="screen" >
+        <rosparam command="load" file="$(find robot_rviz)/config/mrp2a_controllers.yaml" />
+        <param name="sim" value="true" />
+    </node>  -->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: circulation_control
+Description: Description of circulation_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp moveit_ros_planning_interface tf

@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/user/mra7a_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ],
+    "cmake.configureOnOpen": true,
+    "python.analysis.extraPaths": [
+        "/home/user/mra7a_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/user/mra7a_ws/build/catkin_generated/metapackages/mra7a_tutorials",
+    "ros.distro": "kinetic"
+}

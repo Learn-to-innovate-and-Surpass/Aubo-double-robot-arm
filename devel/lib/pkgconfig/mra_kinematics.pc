@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: mra_kinematics
+Description: Description of mra_kinematics
+Version: 0.0.0
+Cflags: -I/home/user/mra7a_ws/src/ros-modular-robot/mra_kinematics/include -I/usr/include
+Libs: -L${prefix}/lib -lmra_moveit_plugin -lmra_kin /usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: boost geometry_msgs moveit_core moveit_kinematics moveit_ros_planning pluginlib roscpp tf_conversions

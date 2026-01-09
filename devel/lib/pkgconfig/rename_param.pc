@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: rename_param
+Description: Description of rename_param
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

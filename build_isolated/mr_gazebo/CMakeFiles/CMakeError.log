@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_abe92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abe92.dir/build.make CMakeFiles/cmTC_abe92.dir/build
+make[1]: Entering directory '/home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_abe92.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_abe92.dir/CheckSymbolExists.c.o   -c /home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_abe92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abe92.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_abe92.dir/CheckSymbolExists.c.o  -o cmTC_abe92 -rdynamic 
+CMakeFiles/cmTC_abe92.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_abe92.dir/build.make:97: recipe for target 'cmTC_abe92' failed
+make[1]: *** [cmTC_abe92] Error 1
+make[1]: Leaving directory '/home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_abe92/fast' failed
+make: *** [cmTC_abe92/fast] Error 2
+
+File /home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f896e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f896e.dir/build.make CMakeFiles/cmTC_f896e.dir/build
+make[1]: Entering directory '/home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f896e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f896e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f896e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f896e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_f896e.dir/CheckFunctionExists.c.o  -o cmTC_f896e -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f896e.dir/build.make:97: recipe for target 'cmTC_f896e' failed
+make[1]: *** [cmTC_f896e] Error 1
+make[1]: Leaving directory '/home/user/mra7a_ws/build_isolated/mr_gazebo/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f896e/fast' failed
+make: *** [cmTC_f896e/fast] Error 2
+
+

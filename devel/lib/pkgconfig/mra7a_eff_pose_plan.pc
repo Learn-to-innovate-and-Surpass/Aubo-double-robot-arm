@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: mra7a_eff_pose_plan
+Description: Description of mra7a_eff_pose_plan
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

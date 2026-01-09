@@ -1,0 +1,13 @@
+
+<launch>
+    <param name="robot_description" textfile="$(find robot_gazebo)/urdf/robot.urdf"/>
+    
+    <!-- fangzhenhuanjing -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+    </include>
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+        <arg name="world_name" value="$(find robot_gazebo)/world/robot_env.world" />
+    </include> -->
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -model mrp2a -param robot_description" />
+
+</launch>

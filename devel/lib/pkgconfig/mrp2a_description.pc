@@ -1,0 +1,8 @@
+prefix=/home/user/mra7a_ws/devel
+
+Name: mrp2a_description
+Description: Description of mrp2a_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

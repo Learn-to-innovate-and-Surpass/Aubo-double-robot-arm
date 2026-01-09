@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_698ff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_698ff.dir/build.make CMakeFiles/cmTC_698ff.dir/build
+make[1]: Entering directory '/home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_698ff.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_698ff.dir/CheckSymbolExists.c.o   -c /home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_698ff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_698ff.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_698ff.dir/CheckSymbolExists.c.o  -o cmTC_698ff -rdynamic 
+CMakeFiles/cmTC_698ff.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_698ff.dir/build.make:97: recipe for target 'cmTC_698ff' failed
+make[1]: *** [cmTC_698ff] Error 1
+make[1]: Leaving directory '/home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_698ff/fast' failed
+make: *** [cmTC_698ff/fast] Error 2
+
+File /home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_11912/fast"
+/usr/bin/make -f CMakeFiles/cmTC_11912.dir/build.make CMakeFiles/cmTC_11912.dir/build
+make[1]: Entering directory '/home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11912.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_11912.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_11912
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11912.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_11912.dir/CheckFunctionExists.c.o  -o cmTC_11912 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_11912.dir/build.make:97: recipe for target 'cmTC_11912' failed
+make[1]: *** [cmTC_11912] Error 1
+make[1]: Leaving directory '/home/user/mra7a_ws/build_isolated/mr_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_11912/fast' failed
+make: *** [cmTC_11912/fast] Error 2
+
+
